@@ -1,0 +1,85 @@
+<section class="book">
+  <div class="left">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            [src]="room?.images[0]?.source"
+            class="d-block w-100"
+            alt="room images"
+          />
+        </div>
+        <div class="carousel-item" *ngFor="let roomImg of room?.images">
+          <img
+            [src]="roomImg?.source"
+            class="d-block w-100"
+            alt="room images"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="right">
+    <h1>Reservation</h1>
+    <p>Premium Room € {{ room?.pricePerNight }},- a night</p>
+    <div class="content">
+      <div class="box">
+        <label for="Check-in">Check-in</label>
+        <input
+          [(ngModel)]="bookData.checkInDate"
+          id="Check-in"
+          type="date"
+          placeholder="Check-in"
+        />
+      </div>
+      <div class="box">
+        <label for="Check-out">Check-out</label>
+        <input
+          [(ngModel)]="bookData.checkOutDate"
+          id="Check-out"
+          type="date"
+          placeholder="Check-out"
+        />
+      </div>
+      <div class="box">
+        <label for="Customer Name">Customer Name</label>
+        <input
+          [(ngModel)]="bookData.customerName"
+          id="Customer Name"
+          type="text"
+          placeholder="Please enter your name"
+        />
+      </div>
+      <div class="box">
+        <label for="Customer Tel:Phone">Customer Tel:Phone</label>
+        <input
+          [(ngModel)]="bookData.customerPhone"
+          id="Customer Tel:Phone"
+          type="text"
+          placeholder="Please enter your phone number"
+        />
+      </div>
+      <button (click)="handleSubmit()" class="submit" type="submit">
+        BOOK NOW
+      </button>
+    </div>
+  </div>
+</section>

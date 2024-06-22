@@ -1,0 +1,10 @@
+.table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.number {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}

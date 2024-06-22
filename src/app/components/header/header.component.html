@@ -1,0 +1,64 @@
+<header class="header">
+  <nav class="navbar my-container">
+    <div class="logo">
+      <img
+        routerLink=""
+        src="https://fsx1.itstep.org/api/v1/files/KI8ivg78U08nXDGDQ-O_18P1-0F49u4b"
+        alt="logo"
+        width="40"
+        height="50"
+      />
+    </div>
+    <hr />
+    <ul [class]="'menu ' + menu">
+      <li
+        routerLink=""
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="active"
+        class="menu__list"
+        (click)="handleOpenMenu()"
+      >
+        Home
+      </li>
+      <li
+        (click)="handleOpenMenu()"
+        routerLink="rooms"
+        routerLinkActive="active"
+        class="menu__list"
+      >
+        Rooms
+      </li>
+      <li
+        (click)="handleOpenMenu()"
+        routerLink="hotels"
+        routerLinkActive="active"
+        class="menu__list"
+      >
+        Hotels
+      </li>
+      <li
+        routerLink="booked-rooms"
+        routerLinkActive="active"
+        class="menu__list"
+        (click)="handleOpenMenu()"
+      >
+        Booked Rooms
+      </li>
+    </ul>
+    <div class="burger_menu" (click)="handleOpenMenu()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="currentColor"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+        />
+      </svg>
+    </div>
+  </nav>
+</header>

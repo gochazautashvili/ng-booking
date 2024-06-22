@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th class="number" scope="col">phone number</th>
+      <th scope="col">checkInDate</th>
+      <th scope="col">checkOutDate</th>
+      <th scope="col">actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of booked; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ book.customerName }}</td>
+      <td class="number">{{ book.customerPhone }}</td>
+      <td>{{ book.checkInDate }}</td>
+      <td>{{ book.checkOutDate }}</td>
+      <td>
+        <button type="button" (click)="deleteBook(book.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
